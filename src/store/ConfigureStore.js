@@ -1,15 +1,15 @@
-import {createStore, combineReducers} from 'redux'
-import allUsers from '../reducers/registeredUsers'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import registerReducer from '../reducers/registeredUsers'
 
-const configureStore = () =>{
-    const store = createStore(
-        combineReducers({
-            users: allUsers
-        })
+const configureStore = () => {
+	const store = createStore(
+		combineReducers({
+			userAuth: registerReducer,
+		})
+		
+	)
 
-    )
-
-    return store
+	return store
 }
 
 export default configureStore

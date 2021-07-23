@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Provider } from 'react-redux'
 import configureStore from './store/ConfigureStore'
 
@@ -11,11 +12,11 @@ store.subscribe(()=>{
   console.log(store.getState())
 })
 
-ReactDOM.render(
+ ReactDOM.render(
   <Provider store={store}>
         <App/>
-
-  </Provider>,
+</Provider>,
+  
   document.getElementById('root')
 );
 
