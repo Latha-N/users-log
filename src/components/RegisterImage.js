@@ -3,7 +3,7 @@ import React from 'react'
 import cofee from '../assets/cofee.jpg'
 import '../../src/App.css'
 
-const Image2 = ()=>{
+const RegisterImage = ()=>{
     return(
         <div class="gfg">
         <img className="img-fluid w-100 " src={cofee} alt=""/>
@@ -13,4 +13,4 @@ const Image2 = ()=>{
         </div>
     )
 }
-export default Image2
+export default  RegisterImage 

@@ -24,7 +24,7 @@ const Facebook = () => {
     if(isLoggedIn){
         fbContent=(
             <div style={{
-                width: '400px',
+                width: '600px',
                 margin: 'auto',
                 background:'#f4f4f4',
                 padding:'20px'
@@ -39,8 +39,7 @@ const Facebook = () => {
             autoLoad={true}
             fields="name,email,picture"
             onClick={componentClicked}
-            callback={responseFacebook} 
-        />
+            callback={responseFacebook}/>
 
         )
     }
@@ -49,6 +48,8 @@ const Facebook = () => {
       
     <div>
       {fbContent}
+      {/* <img style={{borderRadius:50}} src={picture} alt={name}/>
+      <h1>{email}</h1> */}
     </div>
   )
 }

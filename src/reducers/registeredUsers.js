@@ -5,11 +5,10 @@ const registerInitialState={
 
 const registerReducer = (state=registerInitialState, action) =>{
     switch(action.type) {
+        
         //adding users to store
         case 'ADD_REGISTER' :{
-            
             return {...state, register:{...action.payload}}
-            
         }
 
         //creating login

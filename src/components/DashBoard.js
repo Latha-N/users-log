@@ -1,10 +1,13 @@
 import React from 'react'
+import Facebook from './Facebook'
+import '../../src/App.css'
 
 const DashBoard = () => {
   return (
     <div>
-      <h1>hello</h1>
+        <Facebook/>
     </div>
+
   )
 }
 
