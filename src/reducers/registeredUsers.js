@@ -1,11 +1,10 @@
 const registerInitialState={
-    register:{},
-    login:{}
+    register:{}
 }
 
 const registerReducer = (state=registerInitialState, action) =>{
     switch(action.type) {
-        
+
         //adding users to store
         case 'ADD_REGISTER' :{
             return {...state, register:{...action.payload}}
@@ -18,6 +17,8 @@ const registerReducer = (state=registerInitialState, action) =>{
             //     return false
             // }
         }
+
+        
 
         default :{
             return {...state}

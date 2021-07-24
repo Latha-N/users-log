@@ -9,7 +9,7 @@ import LoginImage from './LoginImage';
 import {Link} from 'react-router-dom'
 
 export const Login = (props) => {
-
+    const {handleAuth} = props
     const dispatch = useDispatch()
 
     const userAuth = useSelector((state)=>state.userAuth.register)
@@ -39,10 +39,11 @@ export const Login = (props) => {
             alert('missmatch')
             return false
         }else{
+            handleAuth(true)
             props.history.push("/dashboard")
         }
         }}>
-            
+
       {formik => (
         
         <div class="wrapper">

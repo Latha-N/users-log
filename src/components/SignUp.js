@@ -4,7 +4,7 @@ import { TextField } from './TextField';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { addRegister } from '../actions/signUpActions';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 import Facebook from '../components/Facebook'
 import RegisterImage from './RegisterImage';
 import {Link} from 'react-router-dom'
@@ -32,7 +32,7 @@ export const Signup = (props) => {
   return (
     <Formik
       initialValues={{
-          id:uuid(),
+          id:uuidv4(),
         firstName: '',
         lastName: '',
         email: '',
@@ -42,15 +42,14 @@ export const Signup = (props) => {
       validationSchema={validate}
       onSubmit={values => {
           dispatch(addRegister(values))
+        //   console.log('',values)
             const register = JSON.stringify(values)
             localStorage.setItem('register',register)
-
-        //   console.log(values)
       }}
     >
       {formik => (
         
-        <div class="wrapper">
+        <div class="wrapper">   
             <div><RegisterImage/></div>
         <div>
         <h1 className="my-4 font-weight-bold text-center"style={{color:'blue'}} >Sign up</h1>
@@ -66,9 +65,7 @@ export const Signup = (props) => {
             
             <TextField label="Email address" name="email" type="email" />
             <TextField label="password" name="password" type="password" />
-            <button className="btn btn-success mt-3 w-100" type="submit" onClick={()=>{
-                props.history.push('/login')
-            }}>join our community</button>
+            <button className="btn btn-success mt-3 w-100" type="submit" >join our community</button>
             <p className="text-center text-muted pa" >By joining,you agree to the <b>Terms</b> and <b>Privacy Policy</b></p>
 
           </Form>

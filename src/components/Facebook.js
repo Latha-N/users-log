@@ -40,7 +40,6 @@ const Facebook = () => {
             fields="name,email,picture"
             onClick={componentClicked}
             callback={responseFacebook}/>
-
         )
     }
 
