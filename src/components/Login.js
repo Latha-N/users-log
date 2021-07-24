@@ -11,7 +11,7 @@ export const Login = (props) => {
     const dispatch = useDispatch()
 
     const userAuth = useSelector((state)=>state.userAuth.register)
-    console.log('rrr',userAuth.email)
+
 
   const validate = Yup.object({
     email: Yup.string()
