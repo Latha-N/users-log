@@ -4,13 +4,14 @@ import { TextField } from './TextField';
 import * as Yup from 'yup';
 import { useDispatch,useSelector} from 'react-redux';
 import { addLogin } from '../actions/signUpActions';
-
+import Facebook from './Facebook';
 
 export const Login = (props) => {
 
     const dispatch = useDispatch()
 
-    const userAuth = useSelector((state)=>state.userAuth.register)
+    // const userAuth = useSelector((state)=>state.userAuth.register)
+    // if(userAuth.email != email)
 
 
   const validate = Yup.object({
@@ -42,7 +43,7 @@ export const Login = (props) => {
           <p className="text-center text-muted">Don't?have an account?<b>Sign up</b></p>
 
           <Form>
-              <button className="btn btn-primary w-100">join via facebook</button>
+              <button className="btn  w-100"><Facebook/></button>
             
             <TextField label="Email" name="email" type="email" />
             <TextField label="password" name="password" type="password" />

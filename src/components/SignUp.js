@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { addRegister } from '../actions/signUpActions';
 import { uuid } from 'uuidv4';
+import Facebook from '../components/Facebook'
 
 
 export const Signup = (props) => {
@@ -53,7 +54,7 @@ export const Signup = (props) => {
           <p className="text-center text-muted">Already have an account?<b>Login</b></p>
 
           <Form class="pain">
-              <button className="btn btn-primary w-100">join via facebook</button>
+              <button className="btn w-100"><Facebook/></button>
              <div class="wrapperin">
              <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />
